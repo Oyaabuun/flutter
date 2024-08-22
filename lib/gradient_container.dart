@@ -1,23 +1,31 @@
 import "package:first_app/styled_text.dart";
 import "package:flutter/material.dart";
 
-var startAlignment = Alignment.topLeft;
-var endAlignment = Alignment.bottomRight;
+//var startAlignment = Alignment.topLeft;
+//var endAlignment = Alignment.bottomRight;
 //Alignment? startAlignment; 
+
 //the above commented line can also be used for 
 //varaible declaration but it will show error in begin and end at the later portion of the code 
 //this method of variable declaration means we are telling dart
 //that our variable is alignmet data type and the '?' means that it can accept null type of values 
+//********************************** */
+
+const startAlignment = Alignment.topLeft;
+const endAlignment = Alignment.bottomRight;
+
+/*final endAlignment = Alignment.bottomRight;
+final endAlignment = Alignment.bottomRight;*/
 
 class GradientContainer extends StatelessWidget{
    const GradientContainer({super.key});
   @override
   Widget build(context) {
-      startAlignment=Alignment.topLeft;
+      //startAlignment=Alignment.topLeft;// this line will become error if you are using const it will be only correct if you are using var
       //WE ARE ABLE TO REASSIGN THIS VARIABLE HERE AS IN DART
       //when variable is declared with var variablename then it is dynamic type it can take anyvalue and it is mutable 
       return Container(
-          decoration:  BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: const [
                 Color.fromARGB(255, 6, 82, 3),
