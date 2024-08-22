@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# flutter
+Lets practice flutter yay
+=======
+>>>>>>> 412afe8 (first commit afdasfasf as f)
 # first_app
 
 A new Flutter project.
@@ -14,3 +21,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+<<<<<<< HEAD
+=======
+>>>>>>> 87b4ac4 (first commit afdasfasf as ffas fasd)
+>>>>>>> 412afe8 (first commit afdasfasf as f)

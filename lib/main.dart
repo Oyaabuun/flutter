@@ -1,5 +1,9 @@
 import "package:flutter/material.dart";
+<<<<<<< HEAD
 
+=======
+import 'package:first_app/gradient_container.dart';
+>>>>>>> 412afe8 (first commit afdasfasf as f)
 
 // runApp(const MaterialApp(home: Text('Hello World')));
 //the const word here makes the code more memory efficient
@@ -136,6 +140,7 @@ you get one automatically by Dart.*/
 }
 
 
+<<<<<<< HEAD
 ///widgets are objects and objects are the data structures in the memory
 //StatelessWidget is already present inside the flutter package that we have imported in the beginning of the code 
 //we are inheritng the properties of the statelesswidget in our own custom class
@@ -209,3 +214,5 @@ class GradientContainer extends StatelessWidget{
   }
    
 }
+=======
+>>>>>>> 412afe8 (first commit afdasfasf as f)

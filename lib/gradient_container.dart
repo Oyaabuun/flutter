@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ///widgets are objects and objects are the data structures in the memory
 //StatelessWidget is already present inside the flutter package that we have imported in the beginning of the code 
 //we are inheritng the properties of the statelesswidget in our own custom class
@@ -58,10 +59,35 @@ class GradientContainer extends StatelessWidget{
               ],
               begin: Alignment.topLeft, //the alignmentt sets how the gradient backgourd her will change 
               end: Alignment.bottomRight,
+=======
+import "package:first_app/styled_text.dart";
+import "package:flutter/material.dart";
+
+var startAlignment = Alignment.topLeft;
+var endAlignment = Alignment.bottomRight;
+
+class GradientContainer extends StatelessWidget{
+   const GradientContainer({super.key});
+  @override
+  Widget build(context) {
+      startAlignment=Alignment.topLeft;
+      //WE ARE ABLE TO REASSIGN THIS VARIABLE HERE AS IN DART
+      //when variable is declared with var variablename then it is dynamic type it can take anyvalue and it is mutable 
+      return Container(
+          decoration:  BoxDecoration(
+            gradient: LinearGradient(
+              colors: const [
+                Color.fromARGB(255, 6, 82, 3),
+                Color.fromARGB(255, 103, 160, 37),
+              ],
+              begin: startAlignment, 
+              end: endAlignment,
+>>>>>>> 412afe8 (first commit afdasfasf as f)
             ),
         
         ),
         child: const Center(
+<<<<<<< HEAD
           child: Text('Hello World',style: TextStyle(
             color: Colors.white,
             fontSize: 28.0,
@@ -70,4 +96,10 @@ class GradientContainer extends StatelessWidget{
       ) ; 
   }
    
+=======
+         child : StyledText(),
+        ),
+        );
+    }
+>>>>>>> 412afe8 (first commit afdasfasf as f)
 }
