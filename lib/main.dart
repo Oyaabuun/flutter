@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:first_app/gradient_container.dart';
 
-
 // The main function is the entry point of the Flutter app.
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
-        body: GradientContainer(Color.fromARGB(255, 7, 66, 2),Color.fromARGB(255, 54, 151, 29)), // This is the constructor for the GradientContainer class.
+        body: GradientContainer(
+            const Color.fromARGB(255, 7, 66, 2),
+            const Color.fromARGB(255, 54, 151,
+                29)), // This is the constructor for the GradientContainer class.
       ),
     ),
   );
