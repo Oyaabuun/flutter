@@ -23,6 +23,8 @@ where as final is execution time locked */
 
 class GradientContainer extends StatelessWidget{
    const GradientContainer({super.key});
+  
+
   @override
   Widget build(context) {
       //startAlignment=Alignment.topLeft;// this line will become error if you are using const it will be only correct if you are using var
@@ -41,7 +43,7 @@ class GradientContainer extends StatelessWidget{
         
         ),
         child: const Center(
-         child : StyledText(),
+         child : StyledText('Hello World'),
         ),
         );
     }
