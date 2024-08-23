@@ -15,7 +15,11 @@ const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
 /*final endAlignment = Alignment.bottomRight;
-final endAlignment = Alignment.bottomRight;*/
+final endAlignment = Alignment.bottomRight;
+
+the difference between final and const is that const is compile time locked 
+where as final is execution time locked */
+
 
 class GradientContainer extends StatelessWidget{
    const GradientContainer({super.key});
@@ -27,7 +31,7 @@ class GradientContainer extends StatelessWidget{
       return Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: const [
+              colors:  [
                 Color.fromARGB(255, 6, 82, 3),
                 Color.fromARGB(255, 103, 160, 37),
               ],
