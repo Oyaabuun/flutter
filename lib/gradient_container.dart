@@ -1,4 +1,5 @@
 //import "package:first_app/styled_text.dart";
+import "package:first_app/dice_roller.dart";
 import "package:flutter/material.dart";
 
 //var startAlignment = Alignment.topLeft;
@@ -141,25 +142,89 @@ class GradientContainer extends StatelessWidget {
 /////////////////88888888888888888888888888888888
 ///
 
+//you should use only statelesswidget when 
+//It is absolutely the kind of widget you should use
+//if you just have a widget that takes some input values
+//and then outputs some widgets.
+/*
+But if you have a widget that has some data,
 
+that can change internally
+
+and where such data changes then should affect
+
+the rendered UI, as it's the case here,
+
+where the image we wanna display on the screen
+
+in our own widget here depends
+
+on this "activeDiceImage" variable.
+
+If we have a scenario like this,
+
+"statelesswidget" is the wrong choice.
+
+We should instead create this as a "statefulWidget".
+
+So what's the difference?
+
+StatefulWidgets, as the name implies,
+
+allow us to manage state inside of them.
+
+And state simply is data that may change over time
+
+and that should impact the rendered UI.
+
+So if the data changes, the user interface should change.
+*/
+
+/*
+We simply have different states
+
+of our user interface, you could say.
+
+So therefore here indeed the first step is
+
+to convert this to a "statefulWidget"
+
+to make sure that in here the data may change
+
+though to be precise it would be a bit overkill
+
+to change the entire gradient container
+
+to a "statefulwidget", since the majority of this widget
+
+actually does not depend on that changing data,
+
+it's really just this part here, this image and the button.
+
+Only these things work together to change the image.
+
+The rest of the widget is pretty stable.
+
+Therefore here it would actually be preferable
+
+to break this widget up into two separate widgets.
+
+One "statelessWidget", this one,
+
+and one "statefulWidget"
+*/
 class GradientContainer extends StatelessWidget {
-  GradientContainer(this.color1, this.color2, {super.key});
+//class GradientContainer extends StatefulWidget {
+  const GradientContainer(this.color1, this.color2, {super.key});
 
-  GradientContainer.green({super.key})
+  const GradientContainer.green({super.key})
       : color1 = const Color.fromARGB(255, 4, 80, 7),
         color2 = const Color.fromARGB(255, 123, 175, 63);
 
   final Color color1;
   final Color color2;
 
-  // Class-level variable
-  var activeDiceImage = 'assets/images/dice-2.png';
 
-  void rollDice() {
-    // Modify the class-level variable
-    activeDiceImage = 'assets/images/dice-4.png';
-    print('Changing image....');
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -175,27 +240,8 @@ class GradientContainer extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min, // Centers the dice vertically
-          children: [
-            Image.asset(
-              activeDiceImage,
-              width: 200,
-            ),
-            const SizedBox(height: 20),
-            TextButton(
-              onPressed: rollDice, // Calls the rollDice function on button press
-              style: TextButton.styleFrom(
-                foregroundColor: Colors.white,
-                textStyle: const TextStyle(
-                  fontSize: 28,
-                ),
-              ),
-              child: const Text('Roll Dice'),
-            ),
-          ],
-        ),
+      child: const Center(
+        child: DiceRoller(),
       ),
     );
   }
