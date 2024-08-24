@@ -8,8 +8,7 @@ void main() {
       home: Scaffold(
         body: GradientContainer(
              Color.fromARGB(255, 7, 66, 2),
-             Color.fromARGB(255, 54, 151,
-                29)), // This is the constructor for the GradientContainer class.
+             Color.fromARGB(255, 54, 151,29)), // This is the constructor for the GradientContainer class.
       ),
     ),
   );
